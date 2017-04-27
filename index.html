@@ -20,30 +20,30 @@
            <div id="c" class="panels">Scrolling-Panel 2
 <div class="col-sm-12">
 
-<div class="col-sm-6" id="input">
+<div class="col-sm-6" id="cont6">
 <form class="form-group" action="index.html" method="post">
-   <div class="">
+
 
 FULL NAME:<br>
-   <input id="input" type="text" name="" value="">
-</div>
+   <input id="input1" type="text" name="" value="">
+
 <br><br>
-<div class="">
+
    ADDRESS:<br>
-   <input id="input" type="text" name="" value="">
-   </div>
+   <input id="input2" type="text" name="" value="">
+
    <br><br>
-   <div class="">
+
       TELL:<br>
-   <input id="input" type="text" name="" value="">
-   </div>
+   <input id="input3" type="text" name="" value="">
+
    <br><br>
 
 
 
 
 ITEM TYPE:
-<div class="radio">
+<div class="radio"
    <label>
      <input type="radio" name="flavor" value="chocolate" checked>
    Guitar
@@ -75,11 +75,14 @@ ITEM TYPE:
  <input id="input" type="number" name="" value="">
  </div>
  <br>
-<button type="submit" name="button">Done</button>
+<button type="submit" name="submit">Done</button>
 
+</form>
 </div>
 <div class="col-sm-6" id="outPut">
-
+<span class="input1"></span>
+<span class="input2"></span>
+<span class="input3"></span>
 </div>
 
 
@@ -107,24 +110,33 @@ ITEM TYPE:
 
 
 $(document).ready(function() {
-   $("#inPut form").submit(function () {
+   $("#cont6 form").submit(function(event) {
 
-var input1=$("input#input").val();
+var input1=$("input#input1").val();
+var input2=$("input#input2").val();
+var input3=$("input#input3").val();
 
 
-$("#input").append("input1");
 
 
+
+
+$(".input1").text(input1);
+$(".input2").text(input2);
+$(".input3").text(input3);
+$("#outPut").show();
+
+
+event.preventDefault();
 
    });
 });
 
-$(document).ready(function() {
-   $("button").click(function () {
-      $("#outPut").show();
-       event.preventDefault();
-   });
-});
+// $(document).ready(function() {
+//    $("button").click(function () {
+//
+//    });
+// });
 
 
 
