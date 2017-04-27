@@ -10,9 +10,89 @@
         <body>
 
            <div id="wrapper">
-           <div id="a" class="panels">FIXED PANEL</div>
+           <div id="a" class="panels">FIXED PANEL
+<img src="cool.jpg" alt=""  class="img">
+
+
+
+          </div>
            <div id="b" class="panels">Scrolling-Panel 1</div>
-           <div id="c" class="panels">Scrolling-Panel 2</div>
+           <div id="c" class="panels">Scrolling-Panel 2
+<div class="col-sm-12">
+
+<div class="col-sm-6" id="input">
+<form class="form-group" action="index.html" method="post">
+   <div class="">
+
+FULL NAME:<br>
+   <input id="input" type="text" name="" value="">
+</div>
+<br><br>
+<div class="">
+   ADDRESS:<br>
+   <input id="input" type="text" name="" value="">
+   </div>
+   <br><br>
+   <div class="">
+      TELL:<br>
+   <input id="input" type="text" name="" value="">
+   </div>
+   <br><br>
+
+
+
+
+ITEM TYPE:
+<div class="radio">
+   <label>
+     <input type="radio" name="flavor" value="chocolate" checked>
+   Guitar
+   </label>
+ </div>
+ <div class="radio">
+   <label>
+     <input type="radio" name="flavor" value="vanilla">
+     Ukulele
+   </label>
+ </div>
+ <div class="radio">
+   <label>
+     <input type="radio" name="flavor" value="cookiesandcream">
+     Accessories
+   </label>
+ </div>
+
+<br><br>
+
+ <div class="form-group">
+   <label for="born">Date of Purchase:</label>
+   <input id="born" class="form-control" type="date">
+ </div>
+
+ <br><br>
+ <div class="">
+    ITEM PRICE (Ksh.):<br>
+ <input id="input" type="number" name="" value="">
+ </div>
+ <br>
+<button type="submit" name="button">Done</button>
+
+</div>
+<div class="col-sm-6" id="outPut">
+
+</div>
+
+
+          </div>
+
+
+
+</div>
+
+
+
+
+
            <div id="d" class="panels">Scrolling-Panel 3</div>
            </div>
 
@@ -23,6 +103,36 @@
 
 
 <script>
+
+
+
+$(document).ready(function() {
+   $("#inPut form").submit(function () {
+
+var input1=$("input#input").val();
+
+
+$("#input").append("input1");
+
+
+
+   });
+});
+
+$(document).ready(function() {
+   $("button").click(function () {
+      $("#outPut").show();
+       event.preventDefault();
+   });
+});
+
+
+
+
+
+
+
+
 
 </script>
 
