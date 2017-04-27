@@ -25,10 +25,10 @@
    width: 100%;
    height: 100%;
 }
-#outPut
+/*#outPut
 {
    display: none;
-}
+}*/
 
     /*// this is the fixed first panel */
     #a{
@@ -45,15 +45,19 @@
           /*// the second panel -> after the first fixed panel*/
           /*// should get 100% top margin, thats the trick*/
           #b{
+
              margin-top:100%;
-             background:yellow;
+             background:purple;
              opacity: 0.5;
           }
 
           #c{
-             background:pink;
+opacity: 0.6;
+             /*background:black;*/
+             z-index: 195;
           }
 
           #d{
-             background:green;
+
+             background:black;
           }
