@@ -47,6 +47,7 @@ button
               left:0;
               /* prevents your fixed panel from being on top of your subsequent panels */
               z-index: -99;
+              font-family: cursive;
           }
 .mkt
 {
