@@ -5,19 +5,55 @@
           <link href="css/styles.css" rel="stylesheet" type="text/css">
           <script src="js/jquery.js"></script>
           <!-- <script src="js/scripts.js"></script> -->
-          <title></title>
+          <title>G-Online Market</title>
         </head>
         <body>
 
            <div id="wrapper">
-           <div id="a" class="panels">FIXED PANEL
+           <div id="a" class="panels">WELCOME TO THE BEST ONLINE GUITAR <span class="mkt">MARKET</span> PLACE
 <img src="cool.jpg" alt=""  class="img">
 
 
 
           </div>
-           <div id="b" class="panels">Scrolling-Panel 1</div>
-           <div id="c" class="panels">Scrolling-Panel 2
+           <div id="b" class="panels">
+             <u class="head">Our Products</u>
+             <br><br><br>
+
+             <div class="col-sm-4">
+<img id="gt" src="accord.jpg" alt="">
+
+
+<span class="price">
+   Yamaha guitar
+    <br>
+   ksh. 15,000.00
+</span>
+             </div>
+
+
+             <div class="col-sm-4">
+         <img id="gt" src="images.jpg" alt="">
+
+         <span class="price">
+            Gibson guitar
+             <br>
+            ksh. 20,000.00
+         </span>
+            </div>
+            <div class="col-sm-4">
+        <img id="gt" src="IMGg.jpg" alt="" >
+
+
+        <span class="price">
+           Martin's guitar
+           <br>
+           ksh. 30,000.00
+        </span>
+           </div>
+
+          </div>
+           <div id="c" class="panels">Order Here
 <div class="col-sm-12">
 
 <div class="col-sm-6" id="cont6">
@@ -29,7 +65,7 @@ FULL NAME:<br>
 
 <br><br>
 
-   ADDRESS:<br>
+   E-mail ADDRESS:<br>
    <input id="input2" type="text" name="" value="">
 
    <br><br>
@@ -43,22 +79,22 @@ FULL NAME:<br>
 
 
 ITEM TYPE:
-<div class="radio"
+<div class="radio">
    <label>
-     <input type="radio" name="flavor" value="chocolate" checked>
-   Guitar
+     <input id="input4" type="radio" name="flavor" value="Guitar" checked>
+   <span class="gtr">Yamaha guitar</span>
    </label>
  </div>
  <div class="radio">
    <label>
-     <input type="radio" name="flavor" value="vanilla">
-     Ukulele
+     <input id="input5" type="radio" name="flavor" value="vanilla">
+     Gibson guitar
    </label>
  </div>
  <div class="radio">
    <label>
-     <input type="radio" name="flavor" value="cookiesandcream">
-     Accessories
+     <input id="input6" type="radio" name="flavor" value="cookiesandcream">
+     Martin's guitar
    </label>
  </div>
 
@@ -66,7 +102,7 @@ ITEM TYPE:
 
  <div class="form-group">
    <label for="born">Date of Purchase:</label>
-   <input id="born" class="form-control" type="date">
+   <input id="dop" class="form-control" type="date">
  </div>
 
  <br><br>
@@ -79,11 +115,89 @@ ITEM TYPE:
 
 </form>
 </div>
+<!-- ================================================================================================================================================================= -->
+
+
+
+
 <div class="col-sm-6" id="outPut">
-<span class="input1"></span>
-<span class="input2"></span>
-<span class="input3"></span>
+   <form class="" action="index.html" method="post">
+
+
+   <table>
+      <tr>
+         Confirm purchase details
+      </tr>
+      <tr>
+         <td>
+         <div class="">
+            Name
+         </div>
+         </td>
+
+         <td><span class="input1"></span></td>
+
+
+      </tr>
+
+
+<tr>
+   <td><div class="">
+      E-mail
+
+   </div>
+</td>
+<td><span class="input2"></span></td>
+</tr>
+
+
+      <tr>
+         <td>Telephone No.</td>
+<td><span class="input3"></span></td>
+      </tr>
+
+
+      <tr>
+         <td><div class="">
+            Item
+         </div>
+      </td>
+      <td></td>
+      </tr>
+
+
+<tr>
+   <td><div class="">
+      Date of Purchase
+   </div></td>
+   <td><span class="dob"></span></td>
+</tr>
+<tr>
+   <td><div class="">
+      Price (Ksh.)
+   </div></td>
+   <td></td>
+</tr>
+
+
+
+
+
+</table>
+<button type="submit" name="button">NO</button>
+<button type="submit" name="button">YES</button>
+</form>
 </div>
+
+<!--==============================================================================================================================================================================================  -->
+
+
+
+
+
+
+
+
 
 
           </div>
@@ -96,7 +210,29 @@ ITEM TYPE:
 
 
 
-           <div id="d" class="panels">Scrolling-Panel 3</div>
+           <div id="d" class="panels"><span class="abt"><u>About us</u></span>
+
+<br><br>
+<div class="col-sm-2">
+   <span class="contact">Contacts:</span>
+
+</div>
+<div class="col-sm-2">
+   <div class="f">
+      <a href="#">Facebook</a>
+   </div>
+   <div class="f">
+      <a href="#">Twitter</a>
+   </div>
+   <div class="f">
+      <a href="www.gokiring@gmail.com">E-mail</a>
+   </div>
+</div>
+
+
+
+
+          </div>
            </div>
 
 
@@ -119,11 +255,12 @@ var input3=$("input#input3").val();
 
 
 
-
-
 $(".input1").text(input1);
+
 $(".input2").text(input2);
 $(".input3").text(input3);
+
+
 $("#outPut").show();
 
 
@@ -138,7 +275,24 @@ event.preventDefault();
 //    });
 // });
 
-
+// $(document).ready(function () {
+// $(".radio" "label").submit(function () {
+//    var input4=$("input#input4").val();
+//    var input5=$("input#input5").val();
+//    var input6=$("input#input6").val();
+//
+//
+//    $(".input4").text(input4);
+//    $(".input5").text(input5);
+//    $(".input6").text(input6);
+//
+//    $("#outPut").show();
+//
+//
+//    event.preventDefault();
+// });
+//
+// });
 
 
 
@@ -148,8 +302,49 @@ event.preventDefault();
 
 </script>
 
+<script type="text/javascript">
+// $(document).ready(function () {
+// $("#cont6 form").submit(function () {
+//    var input4= $("input:radio[name=flavor]:checked").val();
+//    var input5=$("input#input5").val();
+//    var input6=$("input#input6").val();
+//
+//
+//    $(".input4").text(".radio");
+//    $(".input5").text(input5);
+//    $(".input6").text(input6);
+//
+//    $("#outPut").show();
+//
+//
+//    event.preventDefault();
+// });
+//
+// });
 
 
+
+
+
+
+
+
+
+</script>
+<script>
+   $(document).ready(function () {
+      $("#cont6 form").submit(function () {
+var dob=$("input#dob").val();
+
+$(".dob").text(dob);
+
+
+$("#outPut").show();
+event.preventDefault();
+
+      });
+   });
+</script>
 
 
           <script src="js/bootstrap.min.js">
